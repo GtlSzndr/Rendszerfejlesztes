@@ -10,6 +10,7 @@ import android.widget.Button;
 public class AdminHome extends AppCompatActivity{
 
     private Button addManager;
+    private Button logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,15 @@ public class AdminHome extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(AdminHome.this, AddManager.class);
+                startActivity(intent);
+            }
+        });
+
+        logout = (Button) findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminHome.this, MainActivity.class);
                 startActivity(intent);
             }
         });

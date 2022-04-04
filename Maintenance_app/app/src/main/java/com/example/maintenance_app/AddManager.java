@@ -18,7 +18,7 @@ public class AddManager extends AppCompatActivity{
 
     private EditText username, education, password;
     private Button addManager;
-    //private Employees employee;
+    private Button back;
 
     private FirebaseDatabase db;
     private DatabaseReference dbRef;
@@ -74,16 +74,15 @@ public class AddManager extends AppCompatActivity{
 
                 dbRef.push().setValue(manager);
 
-//                try{
-//                    employee.add(manager).addOnSuccessListener(succ -> {
-//                        Toast.makeText(AddManager.this, "Karbantartó sikeresen hozzáadva!", Toast.LENGTH_LONG).show();
-//                    }).addOnFailureListener(err -> {
-//                        Toast.makeText(AddManager.this, "Sikertelen a felvitel!", Toast.LENGTH_LONG).show();
-//                        //Toast.makeText(AddManager.this, "error: " + err.getMessage(), Toast.LENGTH_LONG).show();
-//                    });
-//                } catch (Exception e){
-//                    Toast.makeText(AddManager.this, e.getMessage(), Toast.LENGTH_LONG).show();
-//                }
+            }
+        });
+
+        back = (Button) findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AddManager.this, AdminHome.class);
+                startActivity(intent);
             }
         });
     }
