@@ -10,16 +10,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.ValueEventListener;
+
 
 public class MainActivity extends AppCompatActivity{
 
     private Button login;
     private EditText username, password;
-    private Employees employee;
     private DatabaseReference dbRef;
 
     @Override
@@ -30,8 +27,6 @@ public class MainActivity extends AppCompatActivity{
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
 
-        employee = new Employees();
-        dbRef = employee.getRef();
 
         login = (Button) findViewById(R.id.login);
         login.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +55,6 @@ public class MainActivity extends AppCompatActivity{
                 }
 
                 try{
-                    String dbValue = employee.get();
 
                     //TODO: bejelentkezes... aztan abba bele:
 

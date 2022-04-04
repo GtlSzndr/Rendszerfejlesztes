@@ -11,10 +11,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -22,7 +18,10 @@ public class AddManager extends AppCompatActivity{
 
     private EditText username, education, password;
     private Button addManager;
-    private Employees employee;
+    //private Employees employee;
+
+    private FirebaseDatabase db;
+    private DatabaseReference dbRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +32,10 @@ public class AddManager extends AppCompatActivity{
         education = (EditText) findViewById(R.id.regEducation);
         password = (EditText) findViewById(R.id.regPassword);
 
-        employee = new Employees();
+        //employee = new Employees();
+
+        db = FirebaseDatabase.getInstance();
+        dbRef = db.getReference("employees");
 
         addManager = (Button) findViewById(R.id.regAddManager);
         addManager.setOnClickListener(new View.OnClickListener() {
@@ -69,16 +71,19 @@ public class AddManager extends AppCompatActivity{
                 }
 
                 Manager manager = new Manager(_username, _education, _password);
-                try{
-                    employee.add(manager).addOnSuccessListener(succ -> {
-                        Toast.makeText(AddManager.this, "Karbantartó sikeresen hozzáadva!", Toast.LENGTH_LONG).show();
-                    }).addOnFailureListener(err -> {
-                        Toast.makeText(AddManager.this, "Sikertelen a felvitel!", Toast.LENGTH_LONG).show();
-                        //Toast.makeText(AddManager.this, "error: " + err.getMessage(), Toast.LENGTH_LONG).show();
-                    });
-                } catch (Exception e){
-                    Toast.makeText(AddManager.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                }
+
+                dbRef.push().setValue(manager);
+
+//                try{
+//                    employee.add(manager).addOnSuccessListener(succ -> {
+//                        Toast.makeText(AddManager.this, "Karbantartó sikeresen hozzáadva!", Toast.LENGTH_LONG).show();
+//                    }).addOnFailureListener(err -> {
+//                        Toast.makeText(AddManager.this, "Sikertelen a felvitel!", Toast.LENGTH_LONG).show();
+//                        //Toast.makeText(AddManager.this, "error: " + err.getMessage(), Toast.LENGTH_LONG).show();
+//                    });
+//                } catch (Exception e){
+//                    Toast.makeText(AddManager.this, e.getMessage(), Toast.LENGTH_LONG).show();
+//                }
             }
         });
     }
