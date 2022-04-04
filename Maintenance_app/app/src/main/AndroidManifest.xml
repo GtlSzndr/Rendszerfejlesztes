@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Maintenance_app">
         <activity
+            android:name=".AddManager"
+            android:exported="false" />
+        <activity
+            android:name=".AdminHome"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

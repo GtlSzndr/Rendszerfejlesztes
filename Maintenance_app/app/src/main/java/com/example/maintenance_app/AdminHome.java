@@ -7,26 +7,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class AdminHome extends AppCompatActivity implements View.OnClickListener {
 
-    private Button login;
+    private Button addManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_admin_home);
 
-        login = (Button) findViewById(R.id.login);
-        login.setOnClickListener(this);
+        addManager = (Button) findViewById(R.id.addManager);
+        addManager.setOnClickListener(this);
     }
-
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.login:
-                startActivity(new Intent(this, AdminHome.class));
-                break;
+            case R.id.addManager:
+                startActivity(new Intent(this, AddManager.class));
         }
     }
 }
