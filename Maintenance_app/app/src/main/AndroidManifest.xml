@@ -5,10 +5,13 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Maintenance_app"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Maintenance_app">
+        <activity
+            android:name=".WorkerHome"
+            android:exported="false" />
         <activity
             android:name=".AddManager"
             android:exported="false" />

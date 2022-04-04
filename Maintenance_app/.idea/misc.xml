@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Szandi/Desktop/Egyetem/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_add_manager.xml" value="0.30117753623188404" />
-        <entry key="..\:/Users/Szandi/Desktop/Egyetem/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_admin_home.xml" value="0.25" />
-        <entry key="..\:/Users/Szandi/Desktop/Egyetem/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_main.xml" value="0.3578125" />
+        <entry key="..\:/Users/Szandi/Desktop/Egyetem/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_admin_home.xml" value="0.22" />
+        <entry key="..\:/Users/Szandi/Desktop/Egyetem/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Szandi/Desktop/Egyetem/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_worker_home.xml" value="0.26875" />
         <entry key="..\:/Users/Szandi/Desktop/Rendszerfejlesztes/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_main.xml" value="0.33" />
       </map>
     </option>

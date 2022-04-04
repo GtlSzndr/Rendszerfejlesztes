@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class AdminHome extends AppCompatActivity implements View.OnClickListener {
+public class AdminHome extends AppCompatActivity{
 
     private Button addManager;
 
@@ -17,14 +17,14 @@ public class AdminHome extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.activity_admin_home);
 
         addManager = (Button) findViewById(R.id.addManager);
-        addManager.setOnClickListener(this);
+        addManager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminHome.this, AddManager.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.addManager:
-                startActivity(new Intent(this, AddManager.class));
-        }
-    }
 }
