@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity{
     private DatabaseReference dbRef;
     private String _username, _password;
     private String dbUsername;
-    private boolean admin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
