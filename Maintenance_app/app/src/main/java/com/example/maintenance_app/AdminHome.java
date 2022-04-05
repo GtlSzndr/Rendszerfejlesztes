@@ -12,12 +12,15 @@ public class AdminHome extends AppCompatActivity{
     private Button addManager;
     private Button logout;
     private Button addCategories;
+    private Button add_devices;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_home);
 
+        add_devices = findViewById(R.id.btn_add_devices);
         addManager = (Button) findViewById(R.id.addManager);
         addManager.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +45,14 @@ public class AdminHome extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(AdminHome.this, AddCategories.class);
+                startActivity(intent);
+            }
+        });
+
+        add_devices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (AdminHome.this, Devices.class);
                 startActivity(intent);
             }
         });
