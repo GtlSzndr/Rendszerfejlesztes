@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class WorkerHome extends AppCompatActivity {
 
@@ -20,6 +21,8 @@ public class WorkerHome extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(WorkerHome.this, "Sikeres kijelentkezés!", Toast.LENGTH_SHORT).show();
+
                 Intent intent = new Intent(WorkerHome.this, MainActivity.class);
                 startActivity(intent);
             }

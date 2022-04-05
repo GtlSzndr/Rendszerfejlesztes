@@ -2,6 +2,7 @@ package com.example.maintenance_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,7 +38,7 @@ public class Devices extends AppCompatActivity {
         addDevice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Devices.this, "Device data uploaded!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Devices.this, "Eszköz adatok feltöltve!", Toast.LENGTH_SHORT).show();
                 String name = dname.getText().toString();
                 String Dev_ID = devid.getText().toString();
                 String Category = categs.getText().toString();
@@ -52,7 +53,10 @@ public class Devices extends AppCompatActivity {
                 devMap.put("Location", Location);
                 devMap.put("Description", Description);
 
-                root.setValue(devMap);
+                root.push().setValue(devMap);
+
+                Intent intent = new Intent (Devices.this, Devices.class);
+                startActivity(intent);
             }
         });
 

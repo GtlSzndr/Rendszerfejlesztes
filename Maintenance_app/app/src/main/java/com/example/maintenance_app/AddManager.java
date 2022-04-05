@@ -72,7 +72,12 @@ public class AddManager extends AppCompatActivity{
 
                 Manager manager = new Manager(_username, _education, _password);
 
+                Toast.makeText(AddManager.this, "Karbantartó hozzáadva!", Toast.LENGTH_SHORT).show();
+
                 dbRef.push().setValue(manager);
+
+                Intent intent = new Intent(AddManager.this, AddManager.class);
+                startActivity(intent);
 
             }
         });

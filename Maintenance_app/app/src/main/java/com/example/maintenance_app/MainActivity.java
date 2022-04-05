@@ -77,6 +77,9 @@ public class MainActivity extends AppCompatActivity{
                                 @Override
                                 public void onDataChange(DataSnapshot snapshot) {
                                     if(snapshot.exists()){
+
+                                        Toast.makeText(MainActivity.this, "Sikeres bejelentkezés!", Toast.LENGTH_SHORT).show();
+
                                         Intent intent;
                                         if (username_.equals("admin")){
                                             intent = new Intent(MainActivity.this, AdminHome.class);

@@ -11,20 +11,20 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Add New Device"
-        android:background="#376528"
-        android:textSize="25dp"
+        android:background="#03DAC5"
         android:gravity="center"
-        android:textColor="#FFF"/>
+        android:text="Eszköz hozzáadása"
+        android:textColor="#000000"
+        android:textSize="25dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
-        android:text="Name"/>
+        android:gravity="center"
+        android:text="Eszköz neve"
+        android:textSize="20sp" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -32,14 +32,15 @@
         android:layout_marginRight="10dp"
         android:gravity="center"
         android:id="@+id/txt_devname"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
-        android:text="ID"/>
+        android:gravity="center"
+        android:text="azonosító"
+        android:textSize="20sp" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -48,14 +49,15 @@
 
         android:gravity="center"
         android:id="@+id/txt_devid"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
-        android:text="Category"/>
+        android:gravity="center"
+        android:text="kategória száma"
+        android:textSize="20sp" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -64,14 +66,15 @@
         android:inputType="numberSigned"
         android:gravity="center"
         android:id="@+id/txtcategs"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
-        android:text="Location"/>
+        android:gravity="center"
+        android:text="helyszín"
+        android:textSize="20sp" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -80,14 +83,15 @@
 
         android:gravity="center"
         android:id="@+id/txtloc"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
-        android:text="Description"/>
+        android:gravity="center"
+        android:text="leírás"
+        android:textSize="20sp" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -104,7 +108,10 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="55dp"
 
+        android:background="#03DAC5"
         android:gravity="center"
-        android:text="Save"
-        android:textSize="21dp" />
+        android:text="Mentés"
+        android:textSize="21dp"
+        android:textStyle="bold" />
+
 </LinearLayout>

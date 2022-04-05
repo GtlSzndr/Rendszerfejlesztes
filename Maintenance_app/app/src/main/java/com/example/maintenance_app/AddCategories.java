@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -67,6 +68,8 @@ public class AddCategories extends AppCompatActivity {
                 }
 
                 Category category = new Category(_cat, _name, _h);
+                Toast.makeText(AddCategories.this, "Kategória hozzáadva!", Toast.LENGTH_SHORT).show();
+
 
                 dbRef.push().setValue(category);
 
