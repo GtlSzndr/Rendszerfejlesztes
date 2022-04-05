@@ -7,6 +7,25 @@
     tools:context=".AddCategories">
 
     <Button
+        android:id="@+id/regAddCategories"
+        android:layout_width="272dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="69dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="169dp"
+        android:background="#03dac5"
+        android:text="Hozzáadás"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/back"
         android:layout_width="123dp"
         android:layout_height="50dp"
@@ -21,76 +40,36 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/regDevice_cat"
-        android:layout_width="351dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="30dp"
-        android:ems="10"
-        android:hint="Tárgyi kategória"
-        android:textSize="20sp" />
-
-    <Button
-        android:id="@+id/regAddCategories"
-        android:layout_width="272dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/regDevice_cat"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="569dp"
-        android:background="#03dac5"
-        android:text="Hozzáadás"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
     <EditText
-        android:id="@+id/regEducation_cat"
-        android:layout_width="351dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/regDevice_cat"
+        android:id="@+id/reghierarchy"
+        android:layout_width="296dp"
+        android:layout_height="51dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="253dp"
         android:ems="10"
-        android:hint="Képzettség kategória"
+        android:hint="hierarchia száma"
         android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/regAddCategories1"
-        android:layout_width="272dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/regEducation_cat"
+    <EditText
+        android:id="@+id/regName"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_above="@+id/reghierarchy"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="569dp"
-        android:background="#03dac5"
-        android:text="Hozzáadás"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="345dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="27dp"
+        android:ems="10"
+        android:hint="Kategória neve"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -107,5 +86,16 @@
         android:textColor="#000000"
         android:textSize="48sp"
         android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/regCategory"
+        android:layout_width="298dp"
+        android:layout_height="59dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="56dp" />
 
 </RelativeLayout>
