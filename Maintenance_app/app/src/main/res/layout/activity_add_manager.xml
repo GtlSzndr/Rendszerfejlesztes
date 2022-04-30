@@ -6,6 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".AddManager">
 
+    <Spinner
+        android:id="@+id/educationCat2"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/textView9"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="71dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="270dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/regUsername"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="72dp"
+        android:text="Végzettség kiválasztása:"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deviceCat" />
+
     <Button
         android:id="@+id/back"
         android:layout_width="123dp"
@@ -23,7 +54,7 @@
 
     <EditText
         android:id="@+id/regUsername"
-        android:layout_width="351dp"
+        android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
         android:layout_alignParentStart="true"
@@ -37,30 +68,17 @@
         android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/regEducation"
-        android:layout_width="351dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/regUsername"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="30dp"
-        android:ems="10"
-        android:hint="Képzettség"
-        android:inputType="textPersonName"
-        android:textSize="20sp" />
-
-    <EditText
         android:id="@+id/regPassword"
-        android:layout_width="351dp"
+        android:layout_width="270dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/regEducation"
+        android:layout_below="@+id/educationCat2"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="237dp"
         android:ems="10"
         android:hint="Jelszó"
         android:inputType="textPassword"
@@ -70,13 +88,12 @@
         android:id="@+id/regAddManager"
         android:layout_width="272dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/regPassword"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="569dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="157dp"
         android:background="#03dac5"
         android:text="Hozzáadás"
         android:textColor="#000000"

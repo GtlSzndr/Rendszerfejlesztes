@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MainActivity">
         <activity
+            android:name=".EdToDeviceCat"
+            android:exported="false" />
+        <activity
+            android:name=".AddEducation"
+            android:exported="false" />
+        <activity
             android:name=".Devices"
             android:exported="false" />
         <activity

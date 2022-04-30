@@ -4,24 +4,14 @@ import java.util.Locale;
 
 public class Category {
 
-    private String category;
     private String name;
     private String id;
 
     public Category() {}
 
-    public Category(String category, String name, String id) {
-        this.category = category;
+    public Category(String name, String id) {
         this.name = name;
         this.id = id;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
     }
 
     public String getId() {

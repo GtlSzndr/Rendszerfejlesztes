@@ -14,6 +14,7 @@ public class AdminHome extends AppCompatActivity{
     private Button logout;
     private Button addCategories;
     private Button add_devices;
+    private Button addEducation;
 
 
     @Override
@@ -57,6 +58,15 @@ public class AdminHome extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent (AdminHome.this, Devices.class);
+                startActivity(intent);
+            }
+        });
+
+        addEducation = findViewById(R.id.addEducation);
+        addEducation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (AdminHome.this, AddEducation.class);
                 startActivity(intent);
             }
         });

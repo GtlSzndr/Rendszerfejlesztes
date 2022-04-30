@@ -19,7 +19,7 @@ public class Devices extends AppCompatActivity {
     private Button addDevice;
 
 
-    private FirebaseDatabase db =FirebaseDatabase.getInstance() ;
+    private FirebaseDatabase db = FirebaseDatabase.getInstance() ;
     private DatabaseReference root = db.getReference().child("devices");
 
     @Override
@@ -52,6 +52,7 @@ public class Devices extends AppCompatActivity {
                 devMap.put("Category", Category);
                 devMap.put("Location", Location);
                 devMap.put("Description", Description);
+                devMap.put("status", "karbantartas szukseges");
 
                 root.push().setValue(devMap);
 
