@@ -21,9 +21,13 @@
         <entry key="..\:/Users/Szandi/Desktop/MainActivity/app/src/main/res/layout/activity_admin_home.xml" value="0.2318840579710145" />
         <entry key="..\:/Users/Szandi/Desktop/MainActivity/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/Szandi/Desktop/MainActivity/app/src/main/res/layout/activity_worker_home.xml" value="0.2318840579710145" />
-        <entry key="..\:/Users/Szandi/Desktop/new/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_add_categories.xml" value="0.17401215805471124" />
+        <entry key="..\:/Users/Szandi/Desktop/new/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_add_categories.xml" value="0.2" />
+        <entry key="..\:/Users/Szandi/Desktop/new/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_add_education.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/Szandi/Desktop/new/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_add_manager.xml" value="0.25" />
         <entry key="..\:/Users/Szandi/Desktop/new/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_admin_home.xml" value="0.17401215805471124" />
         <entry key="..\:/Users/Szandi/Desktop/new/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_devices.xml" value="0.17401215805471124" />
+        <entry key="..\:/Users/Szandi/Desktop/new/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_ed_to_device_cat.xml" value="0.23333333333333334" />
+        <entry key="..\:/Users/Szandi/Desktop/new/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_worker_home.xml" value="0.17401215805471124" />
       </map>
     </option>
   </component>

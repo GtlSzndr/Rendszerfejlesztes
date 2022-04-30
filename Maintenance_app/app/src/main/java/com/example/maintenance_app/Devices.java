@@ -19,7 +19,7 @@ public class Devices extends AppCompatActivity {
     private Button addDevice;
 
 
-    private FirebaseDatabase db =FirebaseDatabase.getInstance() ;
+    private FirebaseDatabase db = FirebaseDatabase.getInstance() ;
     private DatabaseReference root = db.getReference().child("devices");
 
     @Override

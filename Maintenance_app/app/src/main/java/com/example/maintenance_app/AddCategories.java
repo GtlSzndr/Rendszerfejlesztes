@@ -16,7 +16,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class AddCategories extends AppCompatActivity {
     private EditText name, hierarchy;
-    private Spinner categories;
     private Button addCategories, back;
 
     private FirebaseDatabase db;
@@ -29,13 +28,6 @@ public class AddCategories extends AppCompatActivity {
 
         hierarchy = (EditText) findViewById(R.id.reghierarchy);
         name = (EditText) findViewById(R.id.regName);
-        categories = (Spinner) findViewById(R.id.regCategory);
-        String[] categItems = new String[]{ "device", "education" };
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, categItems);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        categories.setAdapter(adapter);
 
         db = FirebaseDatabase.getInstance();
 
@@ -45,13 +37,7 @@ public class AddCategories extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String _cat = categories.getSelectedItem().toString();
-
-                if (_cat.equals("device")){
-                    dbRef = db.getReference("categories").child("device");
-                } else {
-                    dbRef = db.getReference("categories").child("education");
-                }
+                dbRef = db.getReference("device_categories");
 
                 String _name = name.getText().toString();
                 String _h = hierarchy.getText().toString();
@@ -67,9 +53,8 @@ public class AddCategories extends AppCompatActivity {
                     return;
                 }
 
-                Category category = new Category(_cat, _name, _h);
+                Category category = new Category(_name, _h);
                 Toast.makeText(AddCategories.this, "Kategória hozzáadva!", Toast.LENGTH_SHORT).show();
-
 
                 dbRef.push().setValue(category);
 
