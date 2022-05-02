@@ -22,6 +22,9 @@
             android:name=".AddCategories"
             android:exported="false" />
         <activity
+            android:name=".EmMaintenance"
+            android:exported="false" />
+        <activity
             android:name=".helper"
             android:exported="false" />
         <activity

@@ -6,6 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".WorkerHome">
 
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_alignTop="@+id/addManager"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="495dp"
+        android:text="Rendkívüli feladat hozzáadása:"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addCategories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/addEmMaintenance"
+        android:layout_width="272dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="67dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="453dp"
+        android:background="#03dac5"
+        android:text="Hozzáadás"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/logout2"
         android:layout_width="200dp"
@@ -25,14 +66,17 @@
         android:id="@+id/textView4"
         android:layout_width="216dp"
         android:layout_height="43dp"
+        android:layout_above="@+id/addEmMaintenance"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="98dp"
         android:layout_marginTop="79dp"
         android:layout_marginEnd="97dp"
-        android:text="Karbantarók"
+        android:layout_marginBottom="107dp"
+        android:text="Karbantartók"
         android:textAlignment="center"
         android:textSize="34sp"
         android:textStyle="bold" />
+
 </RelativeLayout>

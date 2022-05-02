@@ -11,6 +11,7 @@ import android.widget.Toast;
 public class WorkerHome extends AppCompatActivity {
 
     private Button logout;
+    private Button em_maintenance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,16 @@ public class WorkerHome extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        em_maintenance = (Button) findViewById(R.id.addEmMaintenance);
+        em_maintenance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(WorkerHome.this, EmMaintenance.class);
+                startActivity(intent);
+            }
+        });
     }
+
 
 }
