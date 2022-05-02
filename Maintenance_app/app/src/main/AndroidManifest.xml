@@ -25,6 +25,9 @@
             android:name=".EmMaintenance"
             android:exported="false" />
         <activity
+            android:name=".ReMaintenance"
+            android:exported="false" />
+        <activity
             android:name=".helper"
             android:exported="false" />
         <activity

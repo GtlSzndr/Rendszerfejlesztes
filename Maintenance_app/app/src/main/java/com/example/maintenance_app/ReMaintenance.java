@@ -1,6 +1,5 @@
 package com.example.maintenance_app;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -23,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class EmMaintenance extends AppCompatActivity {
+public class ReMaintenance extends AppCompatActivity{
     private FirebaseDatabase db;
     private DatabaseReference deviceDbRef;
     private DatabaseReference maintenanceDbRef;
@@ -31,16 +30,19 @@ public class EmMaintenance extends AppCompatActivity {
     private ArrayList<String> deviceList;
     private ArrayAdapter<String> deviceAdapter;
     private Spinner deviceSpinner;
+    private Spinner spinner;
     private EditText date;
     private EditText time;
     private EditText error;
     private Button button;
     private Button back;
 
+    String [] periods = {"heti", "havi", "negyedéves ","féléves", "éves"};
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
-        setContentView(R.layout.activity_em_maintenance);
+        setContentView(R.layout.activity_re_maintenance);
         super.onCreate(savedInstanceState);
         db = FirebaseDatabase.getInstance();
         deviceDbRef = db.getReference("devices");
@@ -50,12 +52,17 @@ public class EmMaintenance extends AppCompatActivity {
         deviceList = new ArrayList<String>();
         deviceAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, deviceList);
 
-        deviceSpinner = (Spinner) findViewById(R.id.devices);
-        date = (EditText) findViewById(R.id.em_date);
-        time = (EditText) findViewById(R.id.em_time);
-        error = (EditText) findViewById(R.id.em_error);
-        button = findViewById(R.id.button);
+        deviceSpinner = (Spinner) findViewById(R.id.devices2);
+        date = (EditText) findViewById(R.id.em_date2);
+        time = (EditText) findViewById(R.id.em_time2);
+        error = (EditText) findViewById(R.id.em_error2);
+        button = findViewById(R.id.button2);
         deviceSpinner.setAdapter(deviceAdapter);
+
+        spinner =findViewById(R.id.periods2);
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item,periods);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +72,7 @@ public class EmMaintenance extends AppCompatActivity {
                 String _time = time.getText().toString();
                 String _error = error.getText().toString();
                 String _device = deviceSpinner.getSelectedItem().toString();
+                String _repeat = spinner.getSelectedItem().toString();
 
                 if (_date.isEmpty()) {
                     date.setError("A dátum megadása kötelező!");
@@ -84,22 +92,22 @@ public class EmMaintenance extends AppCompatActivity {
                     return;
                 }
 
-                Maintenance maintenance = new Maintenance(_device, _date, _time, "Rendkívüli", "Egyszeri");
+                Maintenance maintenance = new Maintenance(_device, _date, _time, "Rendszeres", _repeat);
 
-                Toast.makeText(EmMaintenance.this, "Rendkívüli karbantartás hozzáadva!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ReMaintenance.this, "Rendszeres karbantartás hozzáadva!", Toast.LENGTH_SHORT).show();
 
                 maintenanceDbRef.push().setValue(maintenance);
 
-                Intent intent = new Intent(EmMaintenance.this, EmMaintenance.class);
+                Intent intent = new Intent(ReMaintenance.this, ReMaintenance.class);
                 startActivity(intent);
 
             }
         });
-        back = (Button) findViewById(R.id.back2);
+        back = (Button) findViewById(R.id.back3);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(EmMaintenance.this, WorkerHome.class);
+                Intent intent = new Intent(ReMaintenance.this, WorkerHome.class);
                 startActivity(intent);
             }
         });
