@@ -69,8 +69,9 @@ public class ListMaintenance extends AppCompatActivity {
                     String _date = educationSnapshot.child("date").getValue().toString();
                     String _time = educationSnapshot.child("time").getValue().toString();
                     String _repeat = educationSnapshot.child("repeat").getValue().toString();
+                    String _error = educationSnapshot.child("error").getValue().toString();
                     ;
-                    list += _type + "\n" + _device + "\n" + _date + "\n" + _time + "\n" + _repeat + "\n\n";
+                    list += _type + "\n" + _device + "\n" + _date + "\n" + _time + "\n" + _repeat + "\n"+_error + "\n\n";
                 }
                 tv.setText(list);
 

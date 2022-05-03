@@ -92,7 +92,7 @@ public class ReMaintenance extends AppCompatActivity{
                     return;
                 }
 
-                Maintenance maintenance = new Maintenance(_device, _date, _time, "Rendszeres", _repeat);
+                Maintenance maintenance = new Maintenance(_device, _date, _time, "Rendszeres", _repeat, _error);
 
                 Toast.makeText(ReMaintenance.this, "Rendszeres karbantartás hozzáadva!", Toast.LENGTH_SHORT).show();
 

@@ -84,7 +84,7 @@ public class EmMaintenance extends AppCompatActivity {
                     return;
                 }
 
-                Maintenance maintenance = new Maintenance(_device, _date, _time, "Rendkívüli", "Egyszeri");
+                Maintenance maintenance = new Maintenance(_device, _date, _time, "Rendkívüli", "Egyszeri", _error);
 
                 Toast.makeText(EmMaintenance.this, "Rendkívüli karbantartás hozzáadva!", Toast.LENGTH_SHORT).show();
 

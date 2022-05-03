@@ -7,13 +7,15 @@ public class Maintenance {
     String time;
     String type;
     String repeat;
+    String error;
 
-    public Maintenance(String _device, String _date, String _time, String _type, String _repeat){
+    public Maintenance(String _device, String _date, String _time, String _type, String _repeat, String _error){
         this.device = _device;
         this.date = _date;
         this.time = _time;
         this.type = _type;
         this.repeat = _repeat;
+        this.error = _error;
     }
 
     public String getDevice() {
@@ -56,4 +58,11 @@ public class Maintenance {
         this.repeat = repeat;
     }
 
+    public String getError() {
+        return error;
+    }
+
+    public void setError(String error) {
+        this.error = error;
+    }
 }
