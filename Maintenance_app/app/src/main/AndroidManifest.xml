@@ -28,6 +28,9 @@
             android:name=".ReMaintenance"
             android:exported="false" />
         <activity
+            android:name=".ListMaintenance"
+            android:exported="false" />
+        <activity
             android:name=".helper"
             android:exported="false" />
         <activity

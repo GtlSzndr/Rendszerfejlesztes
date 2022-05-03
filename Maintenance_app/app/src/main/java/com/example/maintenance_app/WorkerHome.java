@@ -13,6 +13,7 @@ public class WorkerHome extends AppCompatActivity {
     private Button logout;
     private Button em_maintenance;
     private Button re_maintenance;
+    private Button list_maintenance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,15 @@ public class WorkerHome extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(WorkerHome.this, ReMaintenance.class);
+                startActivity(intent);
+            }
+        });
+        list_maintenance = (Button) findViewById(R.id.listMaintenance);
+        list_maintenance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(WorkerHome.this, ListMaintenance.class);
                 startActivity(intent);
             }
         });
