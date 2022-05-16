@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -21,8 +20,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class EdToDeviceCat extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     private Button saveEdToCat;
@@ -56,7 +53,7 @@ public class EdToDeviceCat extends AppCompatActivity implements AdapterView.OnIt
         educationList.add("nincs megadva végzettség");
         educationAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, educationList);
 
-        educationSpinner = (Spinner) findViewById(R.id.educationCat);
+        educationSpinner = (Spinner) findViewById(R.id.educationSpinner);
         educationSpinner.setAdapter(educationAdapter);
 
         devCatWithEducation = new HashMap<>();
