@@ -226,4 +226,5 @@ public class ChangeState extends AppCompatActivity implements AdapterView.OnItem
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) { }
+
 }
