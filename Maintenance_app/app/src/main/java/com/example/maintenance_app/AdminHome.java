@@ -15,6 +15,7 @@ public class AdminHome extends AppCompatActivity{
     private Button addCategories;
     private Button add_devices;
     private Button addEducation;
+    private Button addWorkWorker;
 
 
     @Override
@@ -39,6 +40,15 @@ public class AdminHome extends AppCompatActivity{
                 Toast.makeText(AdminHome.this, "Sikeres kijelentkezés!", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(AdminHome.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        addWorkWorker = (Button) findViewById(R.id.addWorkWorker);
+        addWorkWorker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminHome.this, WorkWorker.class);
                 startActivity(intent);
             }
         });

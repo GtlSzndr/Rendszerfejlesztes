@@ -31,6 +31,9 @@
             android:name=".ListMaintenance"
             android:exported="false" />
         <activity
+            android:name=".WorkWorker"
+            android:exported="false" />
+        <activity
             android:name=".helper"
             android:exported="false" />
         <activity
