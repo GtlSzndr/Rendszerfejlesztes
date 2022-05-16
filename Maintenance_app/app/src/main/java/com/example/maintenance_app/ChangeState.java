@@ -26,11 +26,12 @@ import java.util.Map;
 public class ChangeState extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private Button changeState;
     private Spinner deviceSpinner, stateSpinner;
-    private TextView error;
+    private TextView error, desc;
 
     private FirebaseDatabase db;
     private DatabaseReference deviceDbRef;
     private DatabaseReference stateDbRef;
+    private DatabaseReference descDbRef;
 
     private ArrayList<String> deviceList;
     private ArrayAdapter<String> deviceAdapter;
@@ -41,7 +42,7 @@ public class ChangeState extends AppCompatActivity implements AdapterView.OnItem
     private HashMap<String, String> deviceStates;
     private HashMap<String, String> errors;
 
-    private String selectedDevice, selectedState;
+    private String selectedDevice, selectedState, description;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,8 @@ public class ChangeState extends AppCompatActivity implements AdapterView.OnItem
         deviceSpinner.setAdapter(deviceAdapter);
 
         error = (TextView) findViewById(R.id.error);
+        desc = (TextView) findViewById(R.id.desc);
+        desc.setText("Nincs megjelenítendő instrukció");
 
         error.setText("---");
         errors = new HashMap<>();
@@ -74,6 +77,7 @@ public class ChangeState extends AppCompatActivity implements AdapterView.OnItem
         db = FirebaseDatabase.getInstance();
         deviceDbRef = db.getReference("maintenance");
         stateDbRef = db.getReference("states");
+        descDbRef = db.getReference("devices");
 
         fetchDatas();
         fetchDeviceState();
@@ -114,6 +118,7 @@ public class ChangeState extends AppCompatActivity implements AdapterView.OnItem
                     stateSpinner.setSelection(0);
                     fetchDatas();
                     fetchDeviceState();
+                    desc.setText("Nincs megjelenítendő instrukció");
                 } else {
                     Toast.makeText(ChangeState.this, "Nincs kiválasztva feladat!", Toast.LENGTH_SHORT).show();
                 }
@@ -156,6 +161,25 @@ public class ChangeState extends AppCompatActivity implements AdapterView.OnItem
         });
     }
 
+    public void fetchDescription(String device){
+        ValueEventListener descListener = descDbRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot Snapshot : snapshot.getChildren()){
+                    String name = Snapshot.child("name").getValue().toString();
+                    if(device.equals(name)){
+                        Toast.makeText(ChangeState.this, device + name,  Toast.LENGTH_SHORT).show();
+                        description = Snapshot.child("Description").getValue().toString();
+                        desc.setText(description);
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) { }
+        });
+    }
+
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         if(adapterView.getId() == R.id.dev){
@@ -169,6 +193,7 @@ public class ChangeState extends AppCompatActivity implements AdapterView.OnItem
                     if(key.equals(selectedDevice)){
                         error.setText(value);
                     }
+
                 }
                 // allapot
                 if(deviceStates.containsKey(selectedDevice)) {
@@ -183,12 +208,18 @@ public class ChangeState extends AppCompatActivity implements AdapterView.OnItem
                                 }
                                 idx++;
                             }
+
+                            if (value.equals(stateList.get(3))){
+                                fetchDescription(key);
+                            } else {
+                                desc.setText("Nincs megjelenítendő instrukció");
+                            }
                         }
+
                     }
                 } else {
                     stateSpinner.setSelection(0);
                 }
-
             }
         }
     }
