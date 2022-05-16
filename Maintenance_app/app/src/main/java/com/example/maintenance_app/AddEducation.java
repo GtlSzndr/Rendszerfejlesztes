@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class AddEducation extends AppCompatActivity {
     private EditText education;
-    private Button addEducation, edToDeviceCat;
+    private Button addEducation, edToDeviceCat, edToManager;
 
     private FirebaseDatabase db;
     private DatabaseReference dbRef;
@@ -64,5 +64,6 @@ public class AddEducation extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }
