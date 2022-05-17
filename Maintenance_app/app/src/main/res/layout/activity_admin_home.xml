@@ -251,4 +251,14 @@
 
         android:textStyle="bold" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="310dp"
+        android:layout_marginTop="661dp"
+        android:backgroundTint="#03dac5"
+        android:clickable="true"
+        app:srcCompat="@drawable/book" />
+
 </RelativeLayout>

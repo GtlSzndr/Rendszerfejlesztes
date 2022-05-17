@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class AdminHome extends AppCompatActivity{
 
     private Button addManager;
@@ -16,6 +18,7 @@ public class AdminHome extends AppCompatActivity{
     private Button add_devices;
     private Button addEducation;
     private Button addWorkWorker;
+    private FloatingActionButton floatingActionButton;
 
 
     @Override
@@ -81,6 +84,14 @@ public class AdminHome extends AppCompatActivity{
             }
         });
 
+        floatingActionButton = findViewById(R.id.floatingActionButton);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminHome.this,searchworkdata.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

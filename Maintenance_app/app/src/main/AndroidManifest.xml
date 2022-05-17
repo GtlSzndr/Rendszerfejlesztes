@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MainActivity">
         <activity
+            android:name=".Dummy"
+            android:exported="false" />
+        <activity
+            android:name=".searchworkdata"
+            android:exported="false" />
+        <activity
+            android:name=".List_work_workers"
+            android:exported="false" />
+        <activity
             android:name=".ChangeState"
             android:exported="false" />
         <activity

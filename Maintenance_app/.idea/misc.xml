@@ -5,8 +5,13 @@
       <map>
         <entry key="..\:/01_Fux_Daniel/Petra/Rendszerf_git/Maintenance_app/app/src/main/res/layout/activity_add_categories.xml" value="0.23020833333333332" />
         <entry key="..\:/01_Fux_Daniel/Petra/Rendszerf_git/Maintenance_app/app/src/main/res/layout/activity_add_education.xml" value="0.23020833333333332" />
+        <entry key="..\:/01_Fux_Daniel/Petra/Rendszerf_git/Maintenance_app/app/src/main/res/layout/activity_admin_home.xml" value="0.358695652173913" />
         <entry key="..\:/01_Fux_Daniel/Petra/Rendszerf_git/Maintenance_app/app/src/main/res/layout/activity_devices.xml" value="0.23020833333333332" />
         <entry key="..\:/01_Fux_Daniel/Petra/Rendszerf_git/Maintenance_app/app/src/main/res/layout/activity_ed_to_device_cat.xml" value="0.23020833333333332" />
+        <entry key="..\:/01_Fux_Daniel/Petra/Rendszerf_git/Maintenance_app/app/src/main/res/layout/activity_list_maintenance.xml" value="0.358695652173913" />
+        <entry key="..\:/01_Fux_Daniel/Petra/Rendszerf_git/Maintenance_app/app/src/main/res/layout/activity_list_work_workers.xml" value="0.358695652173913" />
+        <entry key="..\:/01_Fux_Daniel/Petra/Rendszerf_git/Maintenance_app/app/src/main/res/layout/activity_searchworkdata.xml" value="0.11195542046605876" />
+        <entry key="..\:/01_Fux_Daniel/Petra/Rendszerf_git/Maintenance_app/app/src/main/res/layout/activity_work_worker.xml" value="0.358695652173913" />
         <entry key="..\:/Petra/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_admin_home.xml" value="0.18802083333333333" />
         <entry key="..\:/Petra/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_devices.xml" value="0.7730263157894737" />
         <entry key="..\:/Users/Szandi/Desktop/Beadando/Rendszerfejlesztes/Maintenance_app/app/src/main/res/layout/activity_add_manager.xml" value="0.24592391304347827" />
